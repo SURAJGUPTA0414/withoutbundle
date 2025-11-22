@@ -80,24 +80,24 @@
 
 // A <div> with id="sidebar" containing one nested <div> with text "Links".
 
-const heading = React.createElement("div", { id: "page" }, [
-  React.createElement("div", { id: "nav" }, [
-    React.createElement("div", { id: "home" }, "home"),
-    React.createElement("div", { id: "about" }, "about")
-  ]),
-  React.createElement("div", { id: "content" }, [
-    React.createElement("div", { id: "main" }, "Main Content")
-  ]),
-  React.createElement("div", { id: "sidebar" }, [
-    React.createElement("div", { id: "links" }, "links")
-  ]),
-]);
+// const heading = React.createElement("div", { id: "page" }, [
+//   React.createElement("div", { id: "nav" }, [
+//     React.createElement("div", { id: "home" }, "home"),
+//     React.createElement("div", { id: "about" }, "about")
+//   ]),
+//   React.createElement("div", { id: "content" }, [
+//     React.createElement("div", { id: "main" }, "Main Content")
+//   ]),
+//   React.createElement("div", { id: "sidebar" }, [
+//     React.createElement("div", { id: "links" }, "links")
+//   ]),
+// ]);
 
 // document.getElementById('root').innerHTML = '<h1>Hello, World!</h1>';
-// const heading = React.createElement("div", {}, [
-//   React.createElement("div", {id:'heading1'}, "hi"),
-//   React.createElement("div", {id:'heading2'}, "bye"),
-// ]);
+const heading = React.createElement("div", {}, [
+  React.createElement("div", {id:'heading1'}, "hi"),
+  React.createElement("div", {id:'heading2'}, "bye"),
+]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(heading);
