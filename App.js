@@ -99,11 +99,20 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 const heading = React.createElement("div", {}, 'hi');
+console.log(heading);
 
-// const jsx = <h1>hi</h1>
+// jsx (transpiled before reaching to browser)  - parcel - babel
 
-// console.log(heading);
-// console.log(jsx);
+// jsx --> bebel transpiled --> react.createElement --> object --> html dom
+
+//if multiple lines are there in jsx then we have to use ( ) paranthesis
+
+const jsxHeading = (<div>
+  hello jsx
+
+</div>);
+console.log(jsxHeading);
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(heading);
