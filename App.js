@@ -99,7 +99,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 const heading = React.createElement("div", {}, 'hi');
-console.log(heading);
+// console.log(heading);
 
 // jsx (transpiled before reaching to browser)  - parcel - babel
 
@@ -107,12 +107,33 @@ console.log(heading);
 
 //if multiple lines are there in jsx then we have to use ( ) paranthesis
 
+
+//react element
 const jsxHeading = (<div>
   hello jsx
 
 </div>);
-console.log(jsxHeading);
+
+//react component
+
+const TitleComponent = () => {
+  return(
+    <h1>hello from TitleComponent</h1>
+  );
+}
+
+//component composition
+const HeadingComponent = () => {
+  return(<><h1>hello from component</h1>
+  <TitleComponent />
+  </>);
+}
+
+// const HeadingComponent2 = () => (
+//   <h1>hello from component</h1>
+// )
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(heading);
+// root.render(heading);
+root.render(<HeadingComponent />);
