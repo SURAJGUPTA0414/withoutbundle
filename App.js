@@ -126,8 +126,15 @@ const TitleComponent = () => {
 const HeadingComponent = () => {
   return(<><h1>hello from component</h1>
   <TitleComponent />
+  <TitleComponent></TitleComponent>
+  {TitleComponent()}
   </>);
 }
+
+//JSX ALSO PREVENTING malicious attacks like XSS
+
+
+
 
 // const HeadingComponent2 = () => (
 //   <h1>hello from component</h1>
