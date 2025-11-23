@@ -94,10 +94,16 @@
 // ]);
 
 // document.getElementById('root').innerHTML = '<h1>Hello, World!</h1>';
-const heading = React.createElement("div", {}, [
-  React.createElement("div", {id:'heading1'}, "hi"),
-  React.createElement("div", {id:'heading2'}, "bye"),
-]);
+
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+const heading = React.createElement("div", {}, 'hi');
+
+// const jsx = <h1>hi</h1>
+
+// console.log(heading);
+// console.log(jsx);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(heading);
