@@ -95,10 +95,7 @@
 
 // document.getElementById('root').innerHTML = '<h1>Hello, World!</h1>';
 
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-const heading = React.createElement("div", {}, 'hi');
+// const heading = React.createElement("div", {}, 'hi');
 // console.log(heading);
 
 // jsx (transpiled before reaching to browser)  - parcel - babel
@@ -107,40 +104,122 @@ const heading = React.createElement("div", {}, 'hi');
 
 //if multiple lines are there in jsx then we have to use ( ) paranthesis
 
-
 //react element
-const jsxHeading = (<div>
-  hello jsx
+// const jsxHeading = (<div>
+//   hello jsx
 
-</div>);
+// </div>);
 
 //react component
 
-const TitleComponent = () => {
-  return(
-    <h1>hello from TitleComponent</h1>
-  );
-}
+// const TitleComponent = () => {
+//   return(
+//     <h1>hello from TitleComponent</h1>
+//   );
+// }
 
 //component composition
-const HeadingComponent = () => {
-  return(<><h1>hello from component</h1>
-  <TitleComponent />
-  <TitleComponent></TitleComponent>
-  {TitleComponent()}
-  </>);
-}
+// const HeadingComponent = () => {
+//   return(<><h1>hello from component</h1>
+//   <TitleComponent />
+//   <TitleComponent></TitleComponent>
+//   {TitleComponent()}
+//   </>);
+// }
 
 //JSX ALSO PREVENTING malicious attacks like XSS
-
-
-
 
 // const HeadingComponent2 = () => (
 //   <h1>hello from component</h1>
 // )
 
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+const HeadersComponent = () => {
+  return (
+    <div id="header">
+      <div id="logo">
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/021/953/308/original/food-ordering-app-logo-with-points-and-fork-shapes-in-the-center-free-vector.jpg"
+          alt="logo"
+          width={100}
+        />
+      </div>
+      <div id="nav-items">
+        <ul id="nav-items-ul">
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+const RstaurantcardComponent = () => {
+  return (
+    <div className="restaurant-card">
+      <img
+        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2025/9/1/0d15e0b4-0912-4a9e-ba88-0cc7b26eb444_9864.JPG"
+        alt="restaurant-logo"
+        className="restaurant-logo"
+      />
+      <h3>Restaurant Name</h3>
+      <p>Cusine</p>
+      <p>Rating</p>
+      <p>30 min</p>
+      <p>4.5 rating</p>
+    </div>
+  );
+}   
+ 
+const BodyComponet = () => {
+  return (
+    <div className="body">
+      <div className="search">search</div>
+      <div className="restaurant-container">
+        <RstaurantcardComponent />
+         <RstaurantcardComponent />
+          <RstaurantcardComponent />
+           <RstaurantcardComponent />
+            <RstaurantcardComponent />
+             <RstaurantcardComponent />
+             <RstaurantcardComponent />
+         <RstaurantcardComponent />
+          <RstaurantcardComponent />
+           <RstaurantcardComponent />
+            <RstaurantcardComponent />
+             <RstaurantcardComponent />
+             <RstaurantcardComponent />
+         <RstaurantcardComponent />
+          <RstaurantcardComponent />
+           <RstaurantcardComponent />
+            <RstaurantcardComponent />
+             <RstaurantcardComponent />
+             <RstaurantcardComponent />
+         <RstaurantcardComponent />
+          <RstaurantcardComponent />
+           <RstaurantcardComponent />
+            <RstaurantcardComponent />
+             <RstaurantcardComponent />
+
+      </div>
+      
+    </div>
+  );
+}
+
+const AppLayout = () => {
+  return (
+    <div>
+      <HeadersComponent />
+      <BodyComponet />
+    </div>
+  );
+};
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 // root.render(heading);
-root.render(<HeadingComponent />);
+root.render(<AppLayout />);
